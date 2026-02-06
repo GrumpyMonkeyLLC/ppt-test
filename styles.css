@@ -698,3 +698,25 @@ footer {
     nav { display: none; }
     .contact-grid { grid-template-columns: 1fr; }
 }
+/* Style the select box itself */
+.form-group select {
+    appearance: none; /* Removes default OS styling */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem; /* Make room for the new arrow */
+    cursor: pointer;
+}
+
+/* Style the dropdown menu (the list that pops out) */
+.form-group select option {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e5e7eb;            /* Light text */
+    padding: 10px;
+}
+
+/* Fix for mobile/Safari to ensure background displays */
+.form-group select:not([multiple]) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
